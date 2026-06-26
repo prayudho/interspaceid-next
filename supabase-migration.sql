@@ -80,7 +80,7 @@ CREATE TABLE IF NOT EXISTS our_team (
   "oteaFoto"        VARCHAR(255),
   "oteaAvatar"      VARCHAR(255),
   "oteaCreateBy"    INTEGER,
-  "oTeaCreateTime"  TIMESTAMP,
+  "oteaCreateTime"  TIMESTAMP,
   "oteaUpdateBy"    INTEGER,
   "oteaUpdateTime"  TIMESTAMP
 );
