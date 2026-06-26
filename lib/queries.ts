@@ -65,10 +65,11 @@ export type PageData = {
 }
 
 export async function getGlobalSetting(lang: string): Promise<GlobalSetting> {
-  const { data } = await supabaseAdmin
+  const { data: rows } = await supabaseAdmin
     .from('global_setting')
     .select('*')
-    .single()
+    .limit(1)
+  const data = rows?.[0] ?? null
   if (!data) throw new Error('global_setting not found')
   const langKey = lang === 'en' ? 'En' : 'Id'
   return {
